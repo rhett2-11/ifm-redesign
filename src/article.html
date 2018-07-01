@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Floating Button Nav</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+
+    <body>
+
+        <div class="top-nav">
+            <i class="fas fa-arrow-left" id="navBack"></i>
+            <span>This will be an article!</span>
+            <i class="fas fa-user-circle"></i>
+        </div>
+
+        <!-- orange show/hide nav buttons -->
+        <div class="nav-button">
+            <button type="button" class="btn btn-primary rounded-circle animated bounceInUp" id="showMenu">
+                <!-- <i class="fas fa-fire fa-2x"></i> -->
+                <img src="assets/Menu_Icon.svg" class="img-fluid">                
+            </button>
+        </div>
+
+        <div class="close-nav-button">
+            <button type="button" class="btn btn-primary rounded-circle hideButton animated bounceInUp" id="hideMenu"><i class="fas fa-times fa-2x"></i></button>
+        </div>
+
+        <!-- full mobile nav menu -->
+        <nav>
+            <div class="nav-menu">
+                <div class="menu-header">
+                    <img src="https://www.indyfitnessmag.com/images/horizontal-logo.png" class="img-fluid">
+                </div>
+                <div class="menu-items">
+                    <!-- horizontal sliding nav arrows -->
+                    <div class="nav-arrows">
+                        <a href="#firstLink" id="leftNavArrow" class="animated fadeOutLeft">
+                            <i class="fas fa-angle-left"></i>
+                        </a>
+                        <a href="#lastLink" id="rightNavArrow">
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+
+                    <a href="/" id="firstLink">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="articles.html">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Articles</span>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Gyms</span>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-users"></i>
+                        <span>Trainers</span>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="#" id="lastLink">
+                        <i class="fas fa-envelope"></i>                        
+                        <span>Contact</span>
+                    </a>
+                </div>
+                <button type="button" class="btn btn-primary btn-lg">Login <i class="fas fa-sign-in-alt"></i></button>
+            </div>
+        </nav>
+
+        <!-- bs sample content -->
+        <main role="main">
+
+            <div class="jumbotron">
+                <div class="container">
+                <h1 class="display-3">This will be an article!</h1>
+                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+                </div>
+            </div>
+        
+            <div class="container">
+                <div class="row">
+                <div class="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details</a></p>
+                </div>
+                </div>
+        
+                <hr>
+        
+            </div>
+
+            <div class="jumbotron">
+                <div class="container">
+                <h1 class="display-3">Hello, world!</h1>
+                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+                </div>
+            </div>
+        
+            <div class="container">
+                <div class="row">
+                <div class="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details</a></p>
+                </div>
+                </div>
+        
+                <hr>
+        
+            </div>
+          
+        </main>
+        
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>

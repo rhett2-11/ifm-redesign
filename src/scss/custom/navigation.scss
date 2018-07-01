@@ -1,0 +1,416 @@
+// main desktop nav menu
+
+.nav-menu {
+    background-color: rgba(255,255,255,.99);
+    width: 100%;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 24px;
+    top: 0;
+    z-index: 1010;
+    transition: $transition-long;    
+    // box-shadow: 0px 4px 5px -4px rgba(0, 0, 0, 0.15);
+    
+
+    .menu-header {
+        img {
+            width: 150px;
+        }
+    }
+
+    .menu-items {
+        height: auto;
+        overflow: visible;
+        display: flex;
+
+        a {     
+            color: $secondary;        
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            height: 60px;
+            width: 100%;
+            font-size: medium;
+            border-bottom: solid 1px $white;
+            box-sizing: border-box;
+            transition: $transition-base;
+            font-weight: bold;
+            position: relative;
+                         
+    
+            i {
+                margin-right: 10px;
+            }
+
+            &:before {
+                content: "";
+                width: 0;
+                height: 3px;
+                position: absolute;
+                bottom: -1px;
+                // right: 0;
+                background: $secondary;
+                transition: $transition-base;
+            }
+
+            &:hover, &:active, &:focus {
+                color: $primary;
+                text-decoration: none;
+                &:before {
+                    width: 100%;
+                    // left: 0;
+                    background: $primary;
+                }
+            }
+        }
+    
+        a.active {
+            font-weight: bold;
+            color: $secondary;
+
+            &:before {
+                content: "";
+                width: 100%;
+                height: 3px;
+                position: absolute;
+                bottom: -1px;
+                right: 0;
+                background: $secondary;
+                transition: none;
+            }
+
+            &:hover {
+                color: $secondary;
+                text-decoration: none;
+                &:before {
+                    width: 100%;
+                    left: 0;
+                    background: $secondary;
+                }
+            }
+        }
+    }
+
+    button {
+        width: 150px;
+        margin-left: 12px;
+        font-size: medium;
+        padding: 0.4rem 0.75rem;
+        // background-color: $secondary;
+        border: none;
+    }
+}
+
+.nav-menu-hide {
+    transform: translateY(80px);    
+}
+
+// adds blur to "main" content area
+.glass-overlay {
+    opacity: .9;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+    transition: $transition-base;
+    width: 100%;
+    height: 100%;
+    background: $white;
+}
+
+main {
+    padding: 110px 0;
+    -webkit-transform:translate3d(0,0,0);
+}
+
+.nav-button, .close-nav-button {
+    display: none;
+}
+
+.desktop-nav-off-canvas {
+    top: -110px;
+}
+
+.top-nav{
+    display: none;
+}
+
+.nav-arrows {
+    display: none;
+}
+
+// MOBILE
+@media (max-width: 650px) {
+
+    main {
+        padding: 55px 0;
+    }
+
+    .desktop-nav-off-canvas {
+        top: auto;
+    }
+
+    .top-nav {
+        width: 100%;
+        height: 55px;
+        padding: 12px 18px;
+        background-color: rgba(255,255,255,.99);
+        color: $secondary;
+        position: fixed;
+        top: 0;
+        box-shadow: 0px 2px 15px -4px rgba(0, 0, 0, 0.3);
+        z-index: 1020;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.25rem;
+        transition: $transition-base;     
+        
+        span {
+            padding: 0 12px;
+            white-space: nowrap; 
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: $gray-900;
+        }
+    }
+
+    .top-nav-off-canvas {
+        transform: translateY(-60px);
+    }
+
+    // main mobile nav menu
+    .nav-menu {
+        background-color: rgba(255,255,255,.99);
+        width: 100%;
+        height: auto;
+        transform: translateY(500px);
+        display: flex;
+        flex-direction: column;
+        align-items: unset;
+        padding: 0 0 80px 0;
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        z-index: 1010;
+        transition: $transition-long;    
+
+        .menu-header {
+            padding: 10% 20%;
+            border-top: solid 5px $primary;
+            img {
+                width: 100%;
+            }
+        }
+
+        .menu-items {
+            height: auto;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            display: flex;
+            position: relative;
+            touch-action: pan-y;
+
+            &::-webkit-scrollbar {
+                width: 0px;
+                background: transparent;
+                -webkit-appearance: none;
+            }
+
+            .nav-arrows {
+                position: fixed;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                pointer-events: none;
+                z-index: 1011;
+                height: 55px;
+                
+                a {
+                    width: auto;
+                    height: auto;
+                    padding: 8px 12px;
+                    border: none;
+                    position: -webkit-sticky;
+                    font-size: x-large;  
+                    pointer-events: all;
+                    transition: $transition-base;                                                                                                
+
+                    &:hover, &:active, &:focus {
+                        border: none;
+                        text-decoration: none;
+                    }
+
+                    i {
+                        margin: 0;
+                        height: 100%;
+                        color: $primary;
+                        border-radius: 50%;
+                        position: -webkit-sticky;
+                        transition: $transition-base;                                                                            
+                    }
+                }
+
+                #leftNavArrow {
+                    left: 0;
+                    background: linear-gradient(to right, white 60% , rgba(255,255,255,0));
+
+                    i {
+                        animation: flickerAnimation 1.5s infinite;
+                    }
+                }
+
+                #rightNavArrow {
+                    right: 0;
+                    background: linear-gradient(to left, white 60% , rgba(255,255,255,0));    
+                    i {
+                        animation: flickerAnimation 1.5s infinite;
+                    }                
+                }
+
+            }
+
+            a {     
+                color: $secondary;        
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 12px 18px;
+                height: 55px;
+                width: 100%;
+                font-size: 1.25rem;
+                border-bottom: solid 3px transparent;
+                box-sizing: border-box;
+                transition: $transition-base;
+        
+                i {
+                    margin-right: 10px;
+                }
+
+                &:before {
+                    content: none;
+                    width: auto;
+                    height: auto;
+                    position: absolute;
+                    bottom: auto;
+                    right: auto;
+                    background: none;
+                }
+    
+                &:hover, &:active {
+                    border-bottom: solid 3px $primary;
+                    color: $primary;
+                    text-decoration: none;
+                    &:before {
+                        width: auto;
+                        left: auto;
+                        background: none;
+                    }
+                }
+
+                &:focus {
+                    color: $primary;
+                    text-decoration: none;
+                    outline: none;
+                }
+            }
+
+            a.active {
+                font-weight: bold;
+                color: $secondary;
+                border-bottom: solid 3px $secondary;                
+    
+                &:before {
+                    content: none;
+                    width: auto;
+                    height: auto;
+                    position: relative;
+                    bottom: auto;
+                    right: auto;
+                    background: none;
+                }
+    
+                &:hover {
+                    color: $secondary;
+                    text-decoration: none;
+                    &:before {
+                        width: auto;
+                        left: auto;
+                        background: none;
+                    }
+                }
+            }
+        }
+
+        button {
+            margin: 30px auto;
+            width: 80%;
+            background-color: $secondary;
+            border: none; 
+            font-size: x-large;   
+            padding: 0.5rem;        
+        }
+    }
+
+    .show-nav-menu {
+        transform: translateY(0);    
+    }
+
+    // floating orange buttons that show/hide the menu    
+    .nav-button, .close-nav-button {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        display: block;
+        text-align: center;
+        z-index: 1020;
+        transition: $transition-base;
+    
+        button {
+            -webkit-box-shadow: 0px 9px 40px -9px rgba(0,0,0,0.5);
+            -moz-box-shadow: 0px 9px 40px -9px rgba(0,0,0,0.5);
+            box-shadow: 0px 9px 40px -9px rgba(0,0,0,0.5);
+            margin: 15px;
+            height: 65px;
+            width: 65px;
+    
+            &:active {
+                background-color: $secondary;
+            }
+            &:focus {
+                background-color: $secondary;
+            }
+
+            img {
+                height: 40px;
+            }
+        }
+    
+        .hideButton {
+            display: none;
+        }
+    }
+    
+    .close-nav-button {
+        button {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+    
+    .mobile-nav-off-canvas {
+        bottom: -101px;
+    }
+}
+
+@keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:.25; }
+    100% { opacity:1; }
+}
