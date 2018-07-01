@@ -2077,7 +2077,8 @@ input[type="button"].btn-block {
 .dropright,
 .dropdown,
 .dropleft {
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
 
 .dropdown-toggle::after {
   display: inline-block;
@@ -2102,7 +2103,6 @@ input[type="button"].btn-block {
   display: none;
   float: left;
   min-width: 10rem;
-  padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
   color: #212529;
@@ -2211,22 +2211,19 @@ input[type="button"].btn-block {
 .dropdown-item {
   display: block;
   width: 100%;
-  padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
   color: #212529;
-  text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
   border: 0; }
   .dropdown-item:hover, .dropdown-item:focus {
     color: #16181b;
     text-decoration: none;
-    background-color: #f8f9fa; }
+    background-color: inherit; }
   .dropdown-item.active, .dropdown-item:active {
     color: #fff;
-    text-decoration: none;
-    background-color: #ff9408; }
+    text-decoration: none; }
   .dropdown-item.disabled, .dropdown-item:disabled {
     color: #6c757d;
     background-color: transparent; }
@@ -9093,10 +9090,18 @@ main {
     font-size: xx-large;
     margin: 0; }
 
-.card-list {
+.horizontal-card-list {
   display: flex;
   overflow: auto;
   -webkit-overflow-scrolling: touch; }
+
+.vertical-card-list {
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow: none;
+  flex-wrap: wrap; }
+  .vertical-card-list .custom-card-link {
+    width: 100%; }
 
 .custom-card-link {
   text-decoration: none;
@@ -9252,9 +9257,13 @@ main {
       color: #adb5bd; }
 
 @media (min-width: 650px) {
-  .card-list {
+  .horizontal-card-list {
     overflow: none;
     flex-wrap: wrap; }
+  .vertical-card-list .custom-card-link {
+    width: 33.33%; }
+  .vertical-card-list .custom-card-link-featured {
+    width: 50%; }
   .custom-card-link {
     width: 33.33333%; }
     .custom-card-link .article-image {

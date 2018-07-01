@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Indy Fitness Mag</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/styles.css">
+
+        <!-- LOADER -->
+        <div id="loaderOverlay">
+            <img class="animated fadeIn" src="assets/V_Color.svg">
+            <div style="display: block" class="animated" id="progstat"></div>
+            <div style="display: block" class="animated" id="progress"></div>
+        </div>
+    </head>
+
+    <body>
+
+        <!-- mobile only -->
+        <div class="top-nav">
+            <i class="fas fa-fire" style="visibility: hidden"></i>
+            <span>Gyms</span>
+            <i class="fas fa-user-circle"></i>
+        </div>
+
+        <!-- orange show/hide nav buttons mobile only -->
+        <div class="nav-button">
+            <button type="button" class="btn btn-primary rounded-circle animated bounceOut" id="showMenu">
+                <!-- <i class="fas fa-fire fa-2x"></i> -->
+                <img src="assets/Menu_Icon.svg" class="img-fluid">
+            </button>
+        </div>
+
+        <div class="close-nav-button">
+            <button type="button" class="btn btn-primary rounded-circle hideButton animated bounceInUp" id="hideMenu"><i class="fas fa-times fa-2x"></i></button>
+        </div>
+        <!-- full nav menu desktop and mobile -->
+        <nav>
+            <div class="nav-menu">
+                <div class="menu-header">
+                    <a href="index.html"><img src="assets/H_Color.svg" class="img-fluid"></a>                 
+                </div>
+                <div class="menu-items">
+                    <!-- horizontal sliding nav arrows -->
+                    <div class="nav-arrows">
+                        <a href="#firstLink" id="leftNavArrow" class="animated fadeOutLeft">
+                            <i class="fas fa-angle-left"></i>
+                        </a>
+                        <a href="#lastLink" id="rightNavArrow">
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+
+                    <a href="index.html" id="firstLink">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="articles.html">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Articles</span>
+                    </a>
+                    <a href="gyms.html">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Gyms</span>
+                    </a>
+                    <a href="trainers.html">
+                        <i class="fas fa-users"></i>
+                        <span>Trainers</span>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-bolt"></i>
+                        <span>Resources</span>
+                    </a>
+                    <div class="dropdown" id="lastLink">
+                        <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">About IFM</a>
+                            <a class="dropdown-item" href="#">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary btn-lg">Login <i class="fas fa-sign-in-alt"></i></button>
+            </div>
+        </nav>
+
+        <!-- page content -->
+        <main role="main">
+
+            <div class="container">
+                <div class="list-header">
+                    <h1>All Gyms</h1>
+                </div>
+
+                <div class="vertical-card-list p-2">
+
+                    <a href="#" class="custom-card-link">
+                        <div class="custom-card m-2 rounded">
+                            <div class="gym-card p-4">
+                                <div class="gym-pic">
+                                    <img src="https://devifmstorage.blob.core.windows.net/gym-icons/Challenge%20Your%20Body.png" class="mx-auto d-block">
+                                </div>
+                                <h6>Challenge Your Body</h6>    
+                                <div class="gym-info">
+                                    <span class="gym-location"><i class="fas fa-map-marker-alt"></i> Noblesville</span>
+                                    <span class="badge badge-secondary ml-auto">#shoulders</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="custom-card-link">
+                        <div class="custom-card m-2 rounded">
+                            <div class="gym-card p-4">
+                                <div class="gym-pic">
+                                    <img src="https://devifmstorage.blob.core.windows.net/gym-icons/Gensis%20Sports%20Performance.png" class="mx-auto d-block">
+                                </div>
+                                <h6>Genesis Sports Performance</h6>    
+                                <div class="gym-info">
+                                    <span class="gym-location"><i class="fas fa-map-marker-alt"></i> Indianapolis</span>
+                                    <span class="badge badge-secondary ml-auto">#shoulders</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="#" class="custom-card-link">
+                        <div class="custom-card m-2 rounded">
+                            <div class="gym-card p-4">
+                                <div class="gym-pic">
+                                    <img src="https://devifmstorage.blob.core.windows.net/gym-icons/Gym-41-Bootcamp.png" class="mx-auto d-block">
+                                </div>
+                                <h6>Gym41 Bootcamp</h6>    
+                                <div class="gym-info">
+                                    <span class="gym-location"><i class="fas fa-map-marker-alt"></i> Indianapolis</span>
+                                    <span class="badge badge-secondary ml-auto">#shoulders</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="custom-card-link">
+                        <div class="custom-card m-2 rounded">
+                            <div class="gym-card p-4">
+                                <div class="gym-pic">                                
+                                    <img src="https://devifmstorage.blob.core.windows.net/gym-icons/KAHA%2BFITNESS.png" class="mx-auto d-block">
+                                </div>
+                                <h6>Kahaha Fitness</h6>    
+                                <div class="gym-info">
+                                    <span class="gym-location"><i class="fas fa-map-marker-alt"></i> Noblesville</span>
+                                    <span class="badge badge-secondary ml-auto">#shoulders</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="custom-card-link">
+                        <div class="custom-card m-2 rounded">
+                            <div class="gym-card p-4">
+                                <div class="gym-pic">                                
+                                    <img src="https://devifmstorage.blob.core.windows.net/gym-icons/Martin%20Nutrition%20%26%20Fitness.png" class="mx-auto d-block">
+                                </div>
+                                <h6>Martin Nutrition and Fitness</h6>    
+                                <div class="gym-info">
+                                    <span class="gym-location"><i class="fas fa-map-marker-alt"></i> Greenwood</span>
+                                    <span class="badge badge-secondary ml-auto">#shoulders</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="custom-card-link">
+                        <div class="custom-card m-2 rounded">
+                            <div class="gym-card p-4">
+                                <div class="gym-pic">                                
+                                    <img src="https://d1zoh1vn9j9xjp.cloudfront.net/images/logo/otf-main-mobilev2.png" class="mx-auto d-block">
+                                </div>
+                                <h6>Orangetheory Fitness</h6>    
+                                <div class="gym-info">
+                                    <span class="gym-location"><i class="fas fa-map-marker-alt"></i> Carmel</span>
+                                    <span class="badge badge-secondary ml-auto">#shoulders</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+        
+                </div>                
+            </div>
+
+        </main>
+        
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>

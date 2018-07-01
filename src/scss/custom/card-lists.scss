@@ -13,10 +13,21 @@
     }
 }
 
-.card-list {
+.horizontal-card-list {
     display: flex;
     overflow: auto;
-    -webkit-overflow-scrolling:touch
+    -webkit-overflow-scrolling:touch;
+}
+
+.vertical-card-list {
+    display: flex;
+    -webkit-overflow-scrolling:touch;
+    overflow: none;
+    flex-wrap: wrap;
+
+    .custom-card-link {
+        width: 100%;
+    }
 }
 
 .custom-card-link {
@@ -228,9 +239,20 @@
 // DESKTOP
 @media (min-width: 650px) {
 
-    .card-list {
+    .horizontal-card-list {
         overflow: none;
         flex-wrap: wrap;
+    }
+
+    .vertical-card-list {
+    
+        .custom-card-link {
+            width: 33.33%;
+        }
+
+        .custom-card-link-featured {
+            width: 50%;
+        }
     }
 
     .custom-card-link {
