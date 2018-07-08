@@ -142,6 +142,38 @@ main {
     display: none;
 }
 
+footer {
+    width: 100%;
+    background-color: $secondary;
+    color: $white;
+
+    a {
+        color: $white;
+    }
+
+    .col-sm {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    img {
+        max-height: 200px;
+    }
+
+    .social-footer {
+        i {
+            margin-left: 20px;
+        }
+    }
+}
+
 // MOBILE
 @media (max-width: 650px) {
 
