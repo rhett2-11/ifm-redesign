@@ -6387,15 +6387,19 @@ footer {
   footer .col-sm {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; }
+    justify-content: flex-end; }
     footer .col-sm ul {
       list-style: none;
       margin: 0;
       padding: 0; }
   footer img {
     max-height: 200px; }
+  footer button {
+    width: fit-content; }
   footer .social-footer i {
-    margin-left: 20px; }
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px; }
 
 @media (max-width: 650px) {
   main {

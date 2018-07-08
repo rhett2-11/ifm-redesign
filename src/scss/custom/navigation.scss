@@ -154,7 +154,7 @@ footer {
     .col-sm {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-end;
 
         ul {
             list-style: none;
@@ -167,9 +167,15 @@ footer {
         max-height: 200px;
     }
 
+    button {
+        width: fit-content;
+    }
+
     .social-footer {
         i {
             margin-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
     }
 }
